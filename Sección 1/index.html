@@ -13,34 +13,34 @@
 <body>
     <div class="content-main">
         <h1>Sección 1. Ejercicio 2</h1>
-        <h3>Se desea elaborar un algoritmo que permita determinar la temperatura equivalente en grados centígrados a
-            la cantidad de grados Fahrenheit actuales en la ciudad de New York. </h3>
+        <h3>Suponiendo que nos encontramos descansando en una nuestra casa en una ciudad de Colombia requiero
+            hacer un plan detallado para llegar a tiempo a mi sitio de trabajo el día siguiente.
+        </h3>
     </div>
     <div class="formulario">
         <form id="formulario">
-            <div id="seleccion">
-                <label class="check-select">
-                    Fahrenheit
-                    <input type="radio" value="FAR" id="FAR" name="grados">
-                </label>
-                <label class="check-select">
-                    Celsius
-                    <input type="radio"  value="CEL" id="CEL" name="grados">
-                </label>
-            </div>
             <label class="check-select">
-                <p>
-                    Ingrese el valor a cambiar
-                </p> 
-                <input id="grado" name="grado" type="number">
+                    Ingrese la tarea
+                <input id="tarea" name="tarea" type="text">
             </label>
-            <button type="submit">Convertir</button>
+            <label class="check-select">
+                    Ingrese la hora
+                <input id="hora" name="hora" type="hour">
+            </label>
+            <button type="submit">Agregar tarea</button>
         </form>
     </div>
 
-    <div id="resultado">
 
-    </div>
+<table>
+    <tr>
+        <th>Tarea</th>
+        <th>Hora</th>
+    </tr>
+<tbody id="resultado">
+
+</tbody>
+</table>
 
 </body>
 
