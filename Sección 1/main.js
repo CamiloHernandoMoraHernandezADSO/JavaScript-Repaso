@@ -5,32 +5,32 @@ addEventListener("DOMContentLoaded", (e) => {
     let result = document.querySelector("#resultado")
     let valor
     select.addEventListener("click", (e) => {
-        let myinput = document.querySelector('input[id="moneda"]');
+        let myinput = document.querySelector('input[id="grado"]');
 
-        if (e.target.checked && e.target.value == "USD") {
-            myinput.placeholder = "Ingrese dólares";
-        } else if (e.target.checked && e.target.value == "COP") {
-            myinput.placeholder = "Ingrese pesos colombianos";
+        if (e.target.checked && e.target.value == "FAR") {
+            myinput.placeholder = "Ingrese Fahrenheit";
+        } else if (e.target.checked && e.target.value == "CEL") {
+            myinput.placeholder = "Ingrese Celsius";
         }
     })
     form.addEventListener("submit", (e) => {
         e.preventDefault()
         let dataInput = Object.fromEntries(new FormData(e.target));
         console.log(dataInput)
-        if(dataInput.monedas == "USD"){
+        if(dataInput.grados == "FAR"){
             console.log(valor)
-            valor = dataInput.moneda * 48822
+            valor = (dataInput.grado - 32) / 1.8 
             result.innerHTML = ""
             result.insertAdjacentHTML("beforeend", `
-                <h1>${dataInput.moneda + ' USD son ' + valor + ' COP'}</h1>
+                <h1>${dataInput.grado + ' Fahrenheit son ' + valor + ' Celsius'}</h1>
             `)
         }
-        else if(dataInput.monedas == "COP"){
+        else if(dataInput.grados == "CEL"){
             console.log(valor)
-            valor = dataInput.moneda / 48822
+            valor = dataInput.grado * 1.8 + 32
             result.innerHTML = ""
             result.insertAdjacentHTML("beforeend", `
-                <h1>${dataInput.moneda + ' COP son ' + valor + ' USD'}</h1>
+                <h1>${dataInput.grado + ' Celsius son ' + valor + ' Fahrenheit'}</h1>
             `)
         }
     })
