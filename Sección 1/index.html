@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="content-main">
+        <h1>Sección 1. Ejercicio 1</h1>
+        <h3>Se desea elaborar un algoritmo que permita identificar la cantidad de dólares equivalentes a una cantidad de pesos colombianos.</h3>
+    </div>
+    <div class="formulario">
+        <form id="formulario">
+            <div id="seleccion">
+                <label class="check-select">
+                    COP
+                    <input type="radio" value="COP" id="COP" name="monedas">
+                </label>
+                <label class="check-select">
+                    USD
+                    <input type="radio"  value="USD" id="USD" name="monedas">
+                </label>
+            </div>
+            <label class="check-select">
+                <p>
+                    Ingrese el valor a cambiar
+                </p> 
+                <input id="moneda" name="moneda" type="number">
+            </label>
+            <button type="submit">Convertir</button>
+        </form>
+    </div>
+
+    <div id="resultado">
+
+    </div>
+
+</body>
+
+</html>
